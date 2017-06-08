@@ -11,7 +11,16 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        // put your code here
+        if(!isset($_SESSION["USR"])){            
+        
+        ?>
+        <form action="valida.php" method="post">
+            <input type="text" name="usuario"/>
+            <input type="password" name="password"/>
+            <input type="submit" value="Acceder"/>
+        </form>
+        <?php
+        }
         ?>
     </body>
 </html>
