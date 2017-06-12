@@ -1,3 +1,7 @@
+<?php 
+    include 'librerias.php';
+   session_start();
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -14,7 +18,7 @@ and open the template in the editor.
         if(!isset($_SESSION["USR"])){            
         
         ?>
-        <form action="valida.php" method="post">
+        <form action="<?php=URL?>/controlador/valida.php" method="post">
             <input type="text" name="usuario"/>
             <input type="password" name="password"/>
             <input type="submit" value="Acceder"/>
